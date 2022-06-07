@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- load icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="../../steps-checklist.css">
+        <script src="../../steps-checklist.js"></script>
+    </head>
+
+    <body>
+        <div class="main-container">
+            <div class="page-header">
+                <span class="previous">&#8249;</span>
+                <span class="page-title">Steps checklist</span>
+                <span class="page-title"></span>
+            </div>
+    
+            <div class="page-body">
+                <div class="page-section single">
+                    <div class="section-title">Remove Restrictions</div>
+
+                    <div class="section-content list">
+                        <div class="section-instructions section-with-background">
+                            <div class="section-instruction">
+                                <div class="bullet-num"></div>
+                                <div class="instruction-text">
+                                    Apps > Settings > Battery > Battery Usage > Power Saving Exclusions / Ignore Optimisations > StepSetGo > Disable Battery Optimization
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-instructions section-with-background">
+                            <div class="section-text">
+                                Alterntively, try this.
+                            </div>
+
+                            <div class="section-instruction">
+                                <div class="bullet-num"></div>
+                                <div class="instruction-text">
+                                    Settings > Battery and Power Saving > Battery Usage > Ignore Optimizations > Turn ON for StepSetGo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="go-to-setting">
+                        Go to Settings
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-footer single">
+            <div class="feedback-section">
+                <div class="section-body">
+                    <div class="feedback-question">Was this helpful?</div>
+                    <div class="feedback-support-text">Help us serve you better!</div>
+                </div>
+    
+                <div class="feedback-actions">
+                    <button id="thumbs-down" class="feedback-action" onclick="onThumbsDown()">
+                        <i class="fa fa-thumbs-down"></i>
+                    </button>
+                    <button id="thumbs-up" class="feedback-action" onclick="onThumbsUp()">
+                        <i class="fa fa-thumbs-up"></i>
+                    </button>
+                </div>
+            </div>
+
+            <Button id="report-issue" class="report-issue">
+                Report an issue
+            </Button>
+        </div>
+    </body>
+</html>

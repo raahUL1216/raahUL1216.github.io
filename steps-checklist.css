@@ -1,0 +1,286 @@
+:root {
+	--carousel-height: 72rem;
+	--carousel-width: 30rem;
+}
+
+html {
+	font-size: 16px;
+	height: 100%;
+}
+
+body {
+	background: #060606;
+	color: #f5f5f5;
+	font-family: "SF UI Text";
+	line-height: normal;
+
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin: 0;
+
+	text-size-adjust: auto;
+	-ms-text-size-adjust: auto;
+	-moz-text-size-adjust: auto;
+	-webkit-text-size-adjust: auto;
+}
+
+.main-container {
+	flex: 1 0 auto;
+}
+
+.page-header {
+	padding: 2rem 3rem;
+}
+
+/* header css start here */
+.page-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 2.5rem;
+}
+
+.page-header .previous {
+    float: left;
+
+	font-size: 3.5rem;
+    line-height: 3.5rem;
+}
+
+/* section/instruction related css starts here */
+.page-section {
+	background: #121212;
+	padding: 2.5rem 3rem;
+	margin-bottom: 2rem;
+}
+
+.page-section.single {
+	background: #060606;
+}
+
+.page-section .section-title {
+	font-size: 3rem;
+	margin: 1rem 0;
+}
+
+.section-content .section-instructions {
+	counter-reset: num 0;
+	padding: 1.5rem 0;
+}
+
+.section-content .section-with-background {
+	background: #1c1c1c;
+	border-radius: 30px;
+	padding: 2rem;
+	margin: 3rem 0;
+}
+
+.section-instructions .section-instruction {
+	display: flex;
+	padding: 1rem 1rem 1rem 0;
+	line-height: 2.5rem;
+}
+
+.section-content .instruction-text {
+	font-size: 2rem;
+	align-self: center;
+	margin-left: 2rem;
+	color: #A9A9A9;
+}
+
+.section-instructions .bullet-num {
+	font-size: 1.5rem;
+	font-weight: 500;;
+	min-width: 3.5rem;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	color: #F5F5F5;
+	background: #404040;
+	text-align: center;
+	border-radius: 50%;
+}
+
+.section-instructions .bullet-num::before {
+	counter-increment: num 1;
+	content: counter(num) " ";
+}
+
+.page-body .page-text {
+	position: relative;
+	overflow: hidden;
+
+	font-size: 2rem;
+	margin: 2.5rem 3rem;
+	color: #A9A9A9;
+}
+  
+.page-body .text-concat {
+	word-wrap: break-word;
+	height: 7.5rem; /* 3 lines * line-height (1.2) */
+	line-height: 2.5rem;
+	padding-right: 11rem;
+}
+
+.page-body .page-text.ellipsis::after {
+	content: "...Read more";
+	font-size: 1.8rem;
+	position: absolute;
+	text-decoration: underline;
+	right: 12px; 
+	bottom: 4px;
+}
+
+.page-body .page-text.ellipsis.no-after::after {
+	content: none;
+}
+
+.page-body .section-subtext {
+	font-size: 2rem;
+	color: #BDBDBD;
+}
+
+.page-body .section-text {
+	font-size: 2.2rem;
+	padding-bottom: 1.5rem;
+	color: #BDBDBD;
+}
+
+.section-instruction .sub-instruction {
+	padding: 1.5rem;
+	margin: 0;
+}
+
+.sub-instruction li {
+	padding: 0.5rem;
+}
+
+.page-section .go-to-setting {
+	font-size: 2.5rem;
+	width: 100%;
+	padding: 1.5rem;
+	margin: 1rem 0;
+	border-radius: 22px;
+	font-family: inherit;
+	color: #000000;
+}
+
+/* carousel css starts here */
+.visual-instruction-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: var(--carousel-height);
+	margin: 2rem 0 4.5rem 0;
+	background: #1C1C1C;
+	border-radius: 60px;
+}
+
+.visual-instruction-container.image-container {
+	margin: 2rem 0 3rem 0;
+}
+
+.visual-instruction-container .carousel-inner {
+    max-width: var(--carousel-width);
+	max-height: calc(var(--carousel-height) - 10rem);
+}
+
+.visual-instruction-container img {
+	width: 100%;
+	height: 100%;
+	border-radius: 40px 40px 0 0;
+}
+
+.visual-instruction-container > img {
+	max-width: var(--carousel-width);
+	max-height: calc(var(--carousel-height) - 10rem);
+}
+
+.visual-instruction-container .carousel-indicators {
+	bottom: -9.5rem;
+}
+
+.carousel-indicators > button.active {
+	background: #F5F5F5 !important;
+}
+
+.carousel-indicators > button {
+	background: #121212 !important;
+	border: 1px solid #A9A9A9 !important;
+	border-radius: 100%;
+	width: 1.5rem !important;
+	height: 1.5rem !important;
+	margin: 0 0.5rem !important;
+}
+
+/* footer css starts here*/
+.page-footer {
+	flex-shrink: 0;
+	padding: 3rem 3rem 5rem 3rem;
+	background: #121212;
+}
+
+.page-footer.single {
+	background: #060606;
+}
+
+.feedback-section {
+	display: flex;
+	justify-content: space-between;
+}
+
+.feedback-section .section-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.feedback-section .feedback-question {
+	font-size: 2.5rem;
+}
+
+.feedback-section .feedback-support-text {
+	font-size: 2rem;
+	color: #a9a9a9;
+}
+
+.feedback-section .feedback-action {
+	font-size: 4rem;
+	width: 7rem;
+	padding: 1rem;
+	margin-left: 2rem;
+	border-radius: 50%;
+
+	background: rgba(64, 64, 64, 0.5);
+	border: 0.75px solid #404040;
+}
+
+.feedback-action .fa {
+	color: #707070;
+}
+
+.feedback-actions button.active {
+	background: #FFE100;
+}
+
+.page-footer .report-issue {
+	display: none;
+
+	font-size: 2rem;
+	width: 100%;
+	font-family: inherit;
+
+	padding: 1.5rem;
+	margin: 4rem 0;
+
+	border: 1px solid #A9A9A9;
+	border-radius: 22px;
+
+	background: #121212;
+	color: #E0E0E0;
+}
+
+.page-footer .report-issue.active {
+	display: block;
+}
